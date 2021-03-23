@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec9f77e306ef7a47895d38efbe5a54a, type: 3}
+  m_Name: AddMoney_5
+  m_EditorClassIdentifier: 
+  _boosterType: 6
+  _changingValue: 25000
+  _price: 19.99
+  _descriptions: something
+  _itemName: AddMoney_5
+  _currencyType: 3
+  _itemPicture: {fileID: 21300000, guid: 6da8af5f3917d2b44a12d9301321b081, type: 3}
+  _currencyPicture: {fileID: 21300000, guid: 32beffcd6d3d5934db6b5296afa4ba7c, type: 3}
+  _itemType: 1
+  _iOSShopIds: cash_25000

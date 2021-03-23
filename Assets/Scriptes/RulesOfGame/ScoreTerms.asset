@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b28b478f224335409e3a0129a651a46, type: 3}
+  m_Name: ScoreTerms
+  m_EditorClassIdentifier: 
+  _distance:
+  - 1
+  - 5
+  - 10
+  - 25
+  - 50
+  - 100
+  - 500
+  - 1000
+  - 2500
+  - 5000
+  - 10000
+  _score: 010000000a000000190000003200000064000000fa000000ee020000d00700004c1d00005c44000050c30000
+  _scoreToMoneyRate: 100

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbe54d51034f3458e8164bd94808f1, type: 3}
+  m_Name: Skin_6
+  m_EditorClassIdentifier: 
+  _id: 6
+  _price: 2000
+  _type: avatar
+  _backPack: {fileID: 0}
+  _feet: {fileID: 207876710589559733, guid: 297340f892bc1ca4cb2d2dac23bdbe8a, type: 3}
+  _hair: {fileID: 3746640010889821817, guid: 89a2d8748cdb4184f9282d9408acf96a, type: 3}
+  _hands: {fileID: 8368724396851067961, guid: 7b3dd17e4884b474bade6ffb4b881f44, type: 3}
+  _headAttachments: {fileID: 0}
+  _jacket: {fileID: 8422325370788289004, guid: e9ca1229358bf5540bc358259ca3dccf, type: 3}
+  _legs: {fileID: 8824918629959271071, guid: 811cd42312eb23446a345cc205d15d09, type: 3}
+  _torso: {fileID: 5227984759722890484, guid: a952e9d1e9f6ec247854a210f30fcd21, type: 3}
+  _vests: {fileID: 0}

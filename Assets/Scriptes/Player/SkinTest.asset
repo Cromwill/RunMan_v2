@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfbe54d51034f3458e8164bd94808f1, type: 3}
+  m_Name: SkinTest
+  m_EditorClassIdentifier: 
+  _backPack: {fileID: 0}
+  _feet: {fileID: 7254045294931200251, guid: 97cd7910933c4c843824564194d526c4, type: 3}
+  _hair: {fileID: 149737844502699717, guid: 640e1064fbf9dea418d403a8e6ef1d75, type: 3}
+  _hands: {fileID: 3361094261655809100, guid: 7b05da4edf3645043ae0398d7a4ba868, type: 3}
+  _headAttachments: {fileID: 0}
+  _jacket: {fileID: 0}
+  _legs: {fileID: 8824918629959271071, guid: 811cd42312eb23446a345cc205d15d09, type: 3}
+  _torso: {fileID: 2808270810154900035, guid: 3d77bb938c5531c4780cfd80692acd59, type: 3}
+  _vests: {fileID: 0}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7541ff4a0731124479c06bc2b6ba0051, type: 3}
+  m_Name: DistanceCoveredForLevel
+  m_EditorClassIdentifier: 
+  _id: 1
+  _name: DistanceCoveredForLevel
+  _showName: Distance Covered For Level
+  _description: 
+  _isRecord: 1
+  _conditions:
+  - 100
+  - 500
+  - 1000
+  - 3000
+  - 5000
+  - 7500
+  - 10000
+  - 20000
+  - 30000
+  - 50000
+  _rewardIndex: 2

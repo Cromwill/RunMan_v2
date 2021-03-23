@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7541ff4a0731124479c06bc2b6ba0051, type: 3}
+  m_Name: OgreKilled
+  m_EditorClassIdentifier: 
+  _id: 3
+  _name: OgreKilled
+  _showName: Ogre Killed
+  _description: 
+  _isRecord: 0
+  _conditions:
+  - 1
+  - 5
+  - 10
+  - 15
+  - 25
+  - 50
+  - 75
+  - 100
+  - 500
+  - 1000
+  _rewardIndex: 20

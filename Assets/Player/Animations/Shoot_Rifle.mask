@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shoot_Rifle
+  m_Mask: 01000000000000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: BackPack
+    m_Weight: 0
+  - m_Path: BackPack/Robin_BP_BackPack
+    m_Weight: 1
+  - m_Path: BackPack/Robin_BP_Bag
+    m_Weight: 1
+  - m_Path: BackPack/Robin_BP_MilitaryBackpack
+    m_Weight: 1
+  - m_Path: BackPack/Robin_BP_TravelBag
+    m_Weight: 1
+  - m_Path: Feet
+    m_Weight: 0
+  - m_Path: Feet/Robin_Feet_00
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_AllStar
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_AllStar2
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_CommonShoes
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_Flogs
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_HipHopSneakers
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_LeatherBoots
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_LongBoots
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_OnlySocks
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_Sandals
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_SpecialBoots
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_SpecialBoots_02
+    m_Weight: 1
+  - m_Path: Feet/Robin_Feet_Suit
+    m_Weight: 1
+  - m_Path: Hair
+    m_Weight: 0
+  - m_Path: Hair/Robin_Hair_style.000
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.001
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.002
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.003
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.004
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.005
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.006
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.007
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.008
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.009
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.010
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.011
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.011_var1
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.011_var2
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.011_var3
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.011_var4
+    m_Weight: 1
+  - m_Path: Hair/Robin_Hair_style.011_var5
+    m_Weight: 1
+  - m_Path: Hands
+    m_Weight: 0
+  - m_Path: Hands/Robin_Hand_00
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_Bandage
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_DragonGlove
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_Glove
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_Glove.001
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_Glove.002
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_Glove.003
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_Glove.004
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_PlasticGloves
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_SkeletalHand
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_StylishHand
+    m_Weight: 1
+  - m_Path: Hands/Robin_Hand_TattooadHand
+    m_Weight: 1
+  - m_Path: Head Attachments
+    m_Weight: 0
+  - m_Path: Head Attachments/Robin_AH_Mask_02
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_FH_Mask
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_FH_Mask_04
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_LH_GasMask
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_LH_Mask_03
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_MH_Glass
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_MH_Glass_02
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_UH_Cap
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_UH_Cap.001
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_UH_Hat
+    m_Weight: 1
+  - m_Path: Head Attachments/Robin_UH_Jacket_B
+    m_Weight: 1
+  - m_Path: Jacket
+    m_Weight: 0
+  - m_Path: Jacket/Robin_Jacket_001
+    m_Weight: 1
+  - m_Path: Jacket/Robin_Jacket_LongCoat
+    m_Weight: 1
+  - m_Path: Legs
+    m_Weight: 0
+  - m_Path: Legs/Robin_Legs_00
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_CommonPants
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_CommonPants.001
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_CommonPants.002
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_CommonPants.003
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_HipHopPants
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_HipHopShorts
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_RippedPants
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_Shorts
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_Suit
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_SurvivalPants
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_SurvivalPants_02
+    m_Weight: 1
+  - m_Path: Legs/Robin_Legs_Underwear
+    m_Weight: 1
+  - m_Path: Robin_Rig
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Neck
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Neck/Head
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/index_01_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/index_01_l/index_02_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/index_01_l/index_02_l/index_03_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/middle_01_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/middle_01_l/middle_02_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/middle_01_l/middle_02_l/middle_03_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/pinky_01_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/pinky_01_l/pinky_02_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/ring_01_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/ring_01_l/ring_02_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/ring_01_l/ring_02_l/ring_03_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/thumb_01_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/thumb_01_l/thumb_02_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/index_01_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/index_01_r/index_02_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/index_01_r/index_02_r/index_03_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/middle_01_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/middle_01_r/middle_02_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/middle_01_r/middle_02_r/middle_03_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/pinky_01_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/pinky_01_r/pinky_02_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/ring_01_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/ring_01_r/ring_02_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/ring_01_r/ring_02_r/ring_03_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/thumb_01_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/thumb_01_r/thumb_02_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/UpperLeg_l
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/UpperLeg_l/LowerLeg_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/UpperLeg_l/LowerLeg_l/Foot_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/UpperLeg_l/LowerLeg_l/Foot_l/Toe_l
+    m_Weight: 1
+  - m_Path: Robin_Rig/Hips/UpperLeg_r
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/UpperLeg_r/LowerLeg_r
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/UpperLeg_r/LowerLeg_r/Foot_r
+    m_Weight: 0
+  - m_Path: Robin_Rig/Hips/UpperLeg_r/LowerLeg_r/Foot_r/Toe_r
+    m_Weight: 0
+  - m_Path: Torso
+    m_Weight: 0
+  - m_Path: Torso/Robin_Torso_00
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_AthleticBody
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_coat
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_CommonT-Shirt
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_CommonT-Shirt.001
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_LongSleeve
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_LongSleeve_02
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_LongSleeveMonster
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_SpecialCoat
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_StylishShirt
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_Suit
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_T-ShirtAndCoat
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_Tank-Top
+    m_Weight: 1
+  - m_Path: Torso/Robin_Torso_TattooadBody
+    m_Weight: 1
+  - m_Path: Vests
+    m_Weight: 0
+  - m_Path: Vests/Robin_Vest_SpecialVest
+    m_Weight: 1

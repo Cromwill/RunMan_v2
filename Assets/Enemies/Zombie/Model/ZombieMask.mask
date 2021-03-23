@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ZombieMask
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Zombie_Calf_L
+    m_Weight: 0
+  - m_Path: Zombie_Calf_R
+    m_Weight: 0
+  - m_Path: Zombie_Hand_L
+    m_Weight: 0
+  - m_Path: Zombie_Hand_R
+    m_Weight: 0
+  - m_Path: Zombie_Head
+    m_Weight: 0
+  - m_Path: Zombie_LowerArm_L
+    m_Weight: 0
+  - m_Path: Zombie_LowerArm_R
+    m_Weight: 0
+  - m_Path: Zombie_Pelves
+    m_Weight: 0
+  - m_Path: Zombie_Rig
+    m_Weight: 1
+  - m_Path: Zombie_Rig/Hips
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Neck
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Neck/Head
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Neck/Head/Head.001
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_l/UpperArm_l/LowerArm_l/Hand_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/Spine/Chest/Shoulder_r/UpperArm_r/LowerArm_r/Hand_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_l/LowerLeg_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_l/LowerLeg_l/Foot_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_l/LowerLeg_l/Foot_l/Toe_l
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_r/LowerLeg_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_r/LowerLeg_r/Foot_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Hips/UpperLeg_r/LowerLeg_r/Foot_r/Toe_r
+    m_Weight: 0
+  - m_Path: Zombie_Rig/LowerLeg_l.001
+    m_Weight: 0
+  - m_Path: Zombie_Rig/LowerLeg_r.001
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Toe_l.001
+    m_Weight: 0
+  - m_Path: Zombie_Rig/Toe_r.001
+    m_Weight: 0
+  - m_Path: Zombie_Rig/UpperLeg_l.001
+    m_Weight: 0
+  - m_Path: Zombie_Rig/UpperLeg_r.001
+    m_Weight: 0
+  - m_Path: Zombie_Spine1_L
+    m_Weight: 0
+  - m_Path: Zombie_Spine1_R
+    m_Weight: 0
+  - m_Path: Zombie_Spine_L
+    m_Weight: 0
+  - m_Path: Zombie_Spine_R
+    m_Weight: 0
+  - m_Path: Zombie_Thigh_L
+    m_Weight: 0
+  - m_Path: Zombie_Thigh_R
+    m_Weight: 0
+  - m_Path: Zombie_UpperArm_L
+    m_Weight: 0
+  - m_Path: Zombie_UpperArm_R
+    m_Weight: 0
