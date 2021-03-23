@@ -15,9 +15,8 @@ public class EnemiesConstructor : MonoBehaviour
 
     private void Start()
     {
-        _spawnGenerator = new EnemySpawnGenerator(_spawnRect);
         StartCoroutine(GenerateOgre(10));
-        StartCoroutine(GenerateRocket(15));
+        //StartCoroutine(GenerateRocket(15));
     }
     public void GenerateEnemeSpawners(TileGeneration[] tiles, TileGeneration currentTile)
     {

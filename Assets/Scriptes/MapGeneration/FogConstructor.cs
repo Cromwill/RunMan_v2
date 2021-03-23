@@ -11,6 +11,7 @@ public class FogConstructor : MonoBehaviour
     [SerializeField] private float _fogRegenirationTime;
     [SerializeField] private float _fogLifeTime;
     [SerializeField] private float _lifeTime;
+    [SerializeField] private Player _player;
     
     private FogPool _pool;
 
@@ -18,6 +19,10 @@ public class FogConstructor : MonoBehaviour
     private float _fogZPosition;
     private float _fogStep;
     private List<Fog> _currentFog = new List<Fog>();
+
+    private const float _normalFogSpeed = 4.0f;
+    private const float _fastFogSpeed = 2.75f;
+    private const float _fastestFogSpeed = 1.0f;
 
     public void StartGenerate(LevelConstructor levelConstructor, TileGeneration startTile)
     {
@@ -36,6 +41,14 @@ public class FogConstructor : MonoBehaviour
         {
             yield return new WaitForSeconds(_fogRegenirationTime);
             _fogZPosition += _fogStep;
+            float distance = _player.transform.position.z - _fogZPosition;
+            if (distance > 50.0f)
+                _fogRegenirationTime = _fastestFogSpeed;
+            else if (distance > 20.0f)
+                _fogRegenirationTime = _fastFogSpeed;
+            else
+                _fogRegenirationTime = _normalFogSpeed;
+
             GenerateFog();
         }
     }

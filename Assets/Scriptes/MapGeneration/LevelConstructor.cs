@@ -15,31 +15,16 @@ public class LevelConstructor : MonoBehaviour
     private bool _isFinishGenerateTiles = false;
     private FogConstructor _fogConstructor;
     private EnemiesConstructor _enemiesConstructor;
-    private DebugField _debugField;
 
     private void OnDestroy()
     {
         _currentTiles.Clear();
     }
 
-    private void Awake()
-    {
-        _debugField = FindObjectOfType<DebugField>();
-        _debugField.ShowDebugText("awake in level Constructor");
-        //Time.timeScale = 1;
-        //GenerateLevel(_startTile);
-        //_currentTiles = new List<ITile>();
-        //_currentTiles.Add(_startTile);
-        //_pool = FindObjectOfType<MapElementPool>();
-        //_fogConstructor = GetComponent<FogConstructor>();
-        //_enemiesConstructor = GetComponent<EnemiesConstructor>();
-    }
-
     private void Start()
     {
         Time.timeScale = 1;
-        //_startTile.CheckPosition += GenerateLevel;
-        
+       
         _currentTiles = new List<TileGeneration>();
         _currentTiles.Add(_startTile);
         _pool = FindObjectOfType<MapElementPool>();
@@ -47,7 +32,6 @@ public class LevelConstructor : MonoBehaviour
         _enemiesConstructor = GetComponent<EnemiesConstructor>();
         GenerateLevel(_startTile);
 
-        _debugField.ShowDebugText("start in level Constructor");
     }
 
     public List<TileGeneration> GetZLine(float zPosition) => _currentTiles.Where(t => t.GetPosition().z == zPosition).ToList();

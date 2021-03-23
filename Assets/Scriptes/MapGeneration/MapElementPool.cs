@@ -8,45 +8,36 @@ using Random = UnityEngine.Random;
 
 public class MapElementPool : MonoBehaviour
 {
-    [SerializeField] private List<MapElement> _nonDestroyObjects;
-    [SerializeField] private List<MapElement> _destroyObjects;
-    [SerializeField] private List<TileGeneration> _tiles;
-    [SerializeField] private int _tilesCount;
-    [SerializeField] private int _startTilesCount;
-
-    public static MapElementPool Instance;
+    public List<MapElement> NonDestroyObjects;
+    public List<MapElement> DestroyObjects;
+    public List<TileGeneration> Tiles;
+    public int TilesCount;
+    public int StartTilesCount;
 
     private TileGeneration[] _tilePool;
     private ExitPanel _exitPanel;
-    private DebugField _debugField;
+
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else if (Instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(this.gameObject);
-        Time.timeScale = 1;
-        GeneratePool(_tilesCount);
+        _tilePool = FindObjectsOfType<TileGeneration>();
     }
 
     public IMapElement GetNonDestroyObject(Transform parent)
     {
-        IMapElement element = Instantiate(_nonDestroyObjects[Random.Range(0, _nonDestroyObjects.Count)], parent);
+        IMapElement element = Instantiate(NonDestroyObjects[Random.Range(0, NonDestroyObjects.Count)], parent);
         element.RandomRotate();
         return element;
     }
 
     public IMapElement GetNonDestroyObject()
     {
-        IMapElement element = _nonDestroyObjects[Random.Range(0, _nonDestroyObjects.Count)];
+        IMapElement element = NonDestroyObjects[Random.Range(0, NonDestroyObjects.Count)];
         element.RandomRotate();
         return element;
     }
     public IMapElement GetDestroyObject()
     {
-        IMapElement element = _destroyObjects[Random.Range(0, _destroyObjects.Count)];
+        IMapElement element = DestroyObjects[Random.Range(0, DestroyObjects.Count)];
         element.RandomRotate();
         return element;
     }
@@ -59,13 +50,6 @@ public class MapElementPool : MonoBehaviour
 
     public TileGeneration GetTile()
     {
-        if (_debugField == null)
-        {
-            _debugField = FindObjectOfType<DebugField>();
-        }
-
-        _debugField.ShowDebugText("in Get tile");
-
         var tilesThatAtPool = _tilePool.Where(t => t.IsInThePool == true).ToArray();
         TileGeneration tile;
         try
@@ -114,6 +98,12 @@ public class MapElementPool : MonoBehaviour
         }
     }
 
+    [ExecuteInEditMode]
+    public void StartGeneratePool()
+    {
+        GeneratePool(StartTilesCount);
+    }
+
     private void ClearMap(int sceneIndex)
     {
         foreach (var tile in _tilePool)
@@ -122,39 +112,19 @@ public class MapElementPool : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
+    [ExecuteInEditMode]
     private void GeneratePool(int count)
     {
-        var tiles = FindObjectsOfType<TileGeneration>();
+        _tilePool = new TileGeneration[count];
+        Vector3 position = transform.position;
 
-        if (tiles.Length > 0)
+        for (int i = 0; i < TilesCount; i++)
         {
-            _tilePool = tiles;
-        }
-        else
-        {
-            _tilePool = new TileGeneration[count];
-            Vector3 position = transform.position;
-
-            for (int i = 0; i < _tilesCount; i++)
-            {
-                _tilePool[i] = Instantiate(_tiles[Random.Range(0, _tiles.Count)]);
-                _tilePool[i].SetPosition(new Vector3(position.x, position.y - i, position.z));
-                _tilePool[i].GenerateDestroyObjects();
-                _tilePool[i].GeneratenonDestroyObjects();
-
-                DontDestroyOnLoad((_tilePool[i] as TileGeneration).gameObject);
-            }
-        }
-    }
-
-    private IEnumerator GenerateTileByStep(Vector3 position)
-    {
-        for (int i = 0; i < _tilesCount; i++)
-        {
-            _tilePool[i] = Instantiate(_tiles[Random.Range(0, _tiles.Count)]);
+            _tilePool[i] = Instantiate(Tiles[Random.Range(0, Tiles.Count)]);
             _tilePool[i].SetPosition(new Vector3(position.x, position.y - i, position.z));
-            DontDestroyOnLoad((_tilePool[i] as TileGeneration).gameObject);
-            yield return null;
+            _tilePool[i].GenerateDestroyObjects();
+            _tilePool[i].GeneratenonDestroyObjects();
         }
+
     }
 }

@@ -84,7 +84,6 @@ public class FogPool : MonoBehaviour
     {
         var fog = Instantiate(_fogPrefab);
         fog.SetPosition(_poolPosition + Vector3.down * index);
-        DontDestroyOnLoad(fog.gameObject);
         return fog;
     }
 }

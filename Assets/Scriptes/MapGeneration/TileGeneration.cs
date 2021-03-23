@@ -42,10 +42,15 @@ public class TileGeneration : MonoBehaviour
         Gizmos.DrawSphere(transform.position + EnemiesSpawnDot, 0.35f);
     }
 
+    private void Awake()
+    {
+        if (_pool == null)
+            _pool = FindObjectOfType<MapElementPool>();
+        _mesh = GetComponent<MeshFilter>().mesh;
+    }
+
     private void Start()
     {
-        _mesh = GetComponent<MeshFilter>().mesh;
-
         CheckPosition = null;
         ReturningToPool = null;
         IsHaveFog = false;
@@ -88,6 +93,7 @@ public class TileGeneration : MonoBehaviour
 
         if (_spawner != null)
             Destroy(_spawner.gameObject);
+
         _pool.ReturnToPool(this);
         ReturningToPool = null;
     }
@@ -117,7 +123,6 @@ public class TileGeneration : MonoBehaviour
             IMapElement mapElement = Instantiate((MapElement)prefab, transform);
             mapElement.SetElement(GetPosition() + positions[i]);
             _mapElements.Add(mapElement);
-            DontDestroyOnLoad((mapElement as MapElement).gameObject);
         }
     }
 
