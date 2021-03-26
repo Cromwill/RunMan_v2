@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ConfirmPanel : MonoBehaviour
@@ -18,6 +19,8 @@ public class ConfirmPanel : MonoBehaviour
 
     private IItem _currentItem;
     private Animator _selfAnimator;
+
+    public event Action ProofOfPurchased;
     public void ShowPanel(IItem item)
     {
         gameObject.SetActive(true);
@@ -57,6 +60,7 @@ public class ConfirmPanel : MonoBehaviour
             _confirmButton.GetComponent<Image>().sprite = _buyButtonImage[1];
             _selfAnimator.Play("Success");
             SetConfirmButtonInteractable();
+            ProofOfPurchased?.Invoke();
         }
     }
 

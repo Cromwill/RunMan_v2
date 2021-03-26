@@ -11,6 +11,8 @@ public class ScoreCounter : MonoBehaviour, IPlayerComponent
     private Vector3 _oldPosition;
     private float _scoreMultiplier = 1;
 
+    private event Action<string> _boosterUsed;
+
     public int score => (int)(_scoreTerms.DistanceToScore(distance) * _scoreMultiplier);
     public float distance { get; private set; }
     public int money => _scoreTerms.ScoreToMoney(score);
@@ -19,6 +21,7 @@ public class ScoreCounter : MonoBehaviour, IPlayerComponent
     public void Initialization(Action<string> action, params Booster[] boosters)
     {
         _oldPosition = PositionColculation(transform.position);
+        _boosterUsed = action;
 
         if (boosters != null)
         {
@@ -59,7 +62,17 @@ public class ScoreCounter : MonoBehaviour, IPlayerComponent
 
     private void UsedBooster(Booster booster)
     {
-        _scoreMultiplier += booster.Value;
+        switch (booster.GetItemName)
+        {
+            case "Score+":
+                _scoreMultiplier += booster.Value;
+                _boosterUsed?.Invoke("Score+");
+                break;
+            case "Score++":
+                _scoreMultiplier += booster.Value;
+                _boosterUsed?.Invoke("Score++");
+                break;
+        }
     }
 
     private Vector3 PositionColculation(Vector3 objectPosition) => new Vector3(objectPosition.x, 0, objectPosition.z);

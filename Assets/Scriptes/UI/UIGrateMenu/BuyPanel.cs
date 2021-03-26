@@ -11,10 +11,11 @@ public class BuyPanel : MonoBehaviour
     [SerializeField] private string _buyMessage;
     [SerializeField] private string _soldMessage;
 
-    public event Action PurchaseСonfirmed;
-
     private Animator _selfAnimator;
     private IBuyableObject _buyableObject;
+
+    public event Action PurchaseСonfirmed;
+
     public void OpenPanel(IBuyableObject buyableObject, bool isSold)
     {
         gameObject.SetActive(true);

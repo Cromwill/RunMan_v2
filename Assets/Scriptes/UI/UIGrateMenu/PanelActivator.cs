@@ -17,12 +17,9 @@ public class PanelActivator : MonoBehaviour
 
     protected virtual void SetActiveObject(GameObject activeObject, params GameObject[] inactiveObject)
     {
-        activeObject.SetActive(true);
-
         foreach (var inactive in inactiveObject)
         {
-            if (inactive != activeObject)
-                inactive.SetActive(false);
+            inactive.SetActive(inactive == activeObject);
         }
     }
 }

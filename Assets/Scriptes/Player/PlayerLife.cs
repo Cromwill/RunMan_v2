@@ -14,21 +14,22 @@ public class PlayerLife : MonoBehaviour, IPlayerComponent
 
     public BoosterType BoosterType => _type;
 
-    private event Action<string> BoosterUsed;
+    private event Action<string> _boosterUsed;
 
     public void Initialization(Action<string> action, params Booster[] boosters)
     {
-        BoosterUsed = action;
+        _boosterUsed = action;
 
         if (boosters != null)
         {
             foreach (Booster booster in boosters)
-                UsedBooster(booster);
+                UseBooster(booster);
         }
     }
 
     public void UsedSkill(SkillData skill, int count)
     {
+
     }
 
     public bool ReduceLife(int damage)
@@ -39,12 +40,10 @@ public class PlayerLife : MonoBehaviour, IPlayerComponent
         {
             currentDamage -= (int)_defualtArmor;
             _defualtArmor = 0;
-            BoosterUsed?.Invoke("Armor");
         }
         if (_defaultLife > 1)
         {
             _defaultLife -= currentDamage;
-            BoosterUsed?.Invoke("Life");
         }
         else
         {
@@ -54,15 +53,17 @@ public class PlayerLife : MonoBehaviour, IPlayerComponent
         return _defaultLife <= 0;
     }
 
-    private void UsedBooster(Booster booster)
+    private void UseBooster(Booster booster)
     {
         switch(booster.GetItemName)
         {
             case "Armor":
                 _defualtArmor += booster.Value;
+                _boosterUsed?.Invoke("Armor");
                 break;
             case "Life":
                 _defaultLife += booster.Value;
+                _boosterUsed?.Invoke("Life");
                 break;
         }
     }

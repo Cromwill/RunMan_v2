@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 public class ModelViewer : MonoBehaviour
@@ -55,7 +53,7 @@ public class ModelViewer : MonoBehaviour
 
         if (_isShop)
         {
-            if(newId > 0 && newId <= _skins.Length)
+            if(newId >= 0 && newId <= _skins.Length)
             {
                 _currentIdSkin = newId;
                 _avatar.SetSkin(_skins.Where(a=> a.Id == newId).First());
@@ -63,10 +61,20 @@ public class ModelViewer : MonoBehaviour
         }
         else
         {
-            if (_openedAvatars.Contains(newId))
+            for(int i = 0; i < _openedAvatars.Length; i++)
             {
-                _currentIdSkin = newId;
-                _avatar.SetSkin(_skins.Where(a => a.Id == newId).First());
+                if(_openedAvatars[i] == _currentIdSkin)
+                {
+                    int newIndex = i + _selfAnimator.GetInteger("Direction");
+
+                    if(newIndex >= 0 && newIndex < _openedAvatars.Length)
+                    {
+                        _currentIdSkin = _openedAvatars[newIndex];
+                        _avatar.SetSkin(_skins.Where(a => a.Id == _currentIdSkin).First());
+                        return;
+                    }
+ 
+                }
             }
         }
         

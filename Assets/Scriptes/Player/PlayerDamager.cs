@@ -13,7 +13,7 @@ public class PlayerDamager : MonoBehaviour, IPlayerComponent
     private PlayerDamageZone _damageZone;
     private Animator _playerAnimator;
 
-    public event Action BulletsRunOut;
+    private event Action<string> _boosterUsed;
 
     public BoosterType BoosterType => _type;
 
@@ -28,6 +28,7 @@ public class PlayerDamager : MonoBehaviour, IPlayerComponent
 
     public void Initialization(Action<string> action, params Booster[] boosters)
     {
+        _boosterUsed = action;
         if (boosters != null)
         {
             foreach (Booster booster in boosters)
@@ -52,8 +53,9 @@ public class PlayerDamager : MonoBehaviour, IPlayerComponent
     {
         switch (booster.GetItemName)
         {
-            case "Damage":
+            case "Weapons++":
                 _defaultDamage += booster.Value;
+                _boosterUsed?.Invoke("Weapons++");
                 break;
         }
     }

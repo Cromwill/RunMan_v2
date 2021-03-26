@@ -24,10 +24,16 @@ public class ShopItem : MonoBehaviour
             _counter.text = _booster.Value.ToString("0.##");
         if (_booster.ItemPicture != null)
             _productShower.sprite = _booster.ItemPicture;
-
+        
         _buyButton.onClick.AddListener(delegate { ItemChosen?.Invoke(_booster); });
+        
         _currensyShower.sprite = _booster.CurrencyPicture;
 
+        ItemShow();
+    }
+
+    public void ItemShow()
+    {
         if (!SaveDataStorage.ItemContain(_booster))
         {
             string format = _booster.CurrencyType == CurrencyType.Real ? "0.00#" : "0.##";

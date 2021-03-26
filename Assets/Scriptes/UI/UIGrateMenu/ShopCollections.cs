@@ -13,6 +13,7 @@ public class ShopCollections : PanelActivator
     private void Start()
     {
         items = GetComponentsInChildren<ShopItem>();
+        _confirmPanel.ProofOfPurchased += UpdateItems;
 
         foreach(var item in items)
         {
@@ -28,6 +29,16 @@ public class ShopCollections : PanelActivator
         {
             if (image != currentImage)
                 image.color = Color.white;
+        }
+    }
+
+    private void UpdateItems()
+    {
+        items = GetComponentsInChildren<ShopItem>();
+
+        foreach (var item in items)
+        {
+            item.ItemShow();
         }
     }
 
