@@ -28,13 +28,13 @@ public class Ogre : Enemy, ISearchablePlayers
     {
         base.SetPlayer(player);
         _selfAnimator.SetBool("Run", true);
+        _selfAnimator.SetBool("Attack", true);
         _isPlayerFounded = true;
     }
 
     public override void Dead()
     {
         _isDead = true;
-        //_selfAnimator.SetBool("Death", true);
         _selfAnimator.SetTrigger("Death");
         StartCoroutine(StartEffect());
         base.Dead();

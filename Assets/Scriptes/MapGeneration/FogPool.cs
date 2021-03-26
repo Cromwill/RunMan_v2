@@ -10,7 +10,7 @@ public class FogPool : MonoBehaviour
     private Fog[] _fogPool;
     private ExitPanel _exit;
 
-    private void Start()
+    private void Awake()
     {
         _fogPool = null;
         GeneratePool(_startCount);

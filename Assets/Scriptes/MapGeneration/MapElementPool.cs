@@ -19,7 +19,7 @@ public class MapElementPool : MonoBehaviour
 
     private void Awake()
     {
-        _tilePool = FindObjectsOfType<TileGeneration>();
+        _tilePool = FindObjectsOfType<TileGeneration>().Where(tile => !tile.IsStartTile).ToArray();
     }
 
     public IMapElement GetNonDestroyObject(Transform parent)

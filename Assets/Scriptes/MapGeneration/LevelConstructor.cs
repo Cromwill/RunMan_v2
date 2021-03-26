@@ -16,11 +16,6 @@ public class LevelConstructor : MonoBehaviour
     private FogConstructor _fogConstructor;
     private EnemiesConstructor _enemiesConstructor;
 
-    private void OnDestroy()
-    {
-        _currentTiles.Clear();
-    }
-
     private void Start()
     {
         Time.timeScale = 1;
@@ -68,15 +63,6 @@ public class LevelConstructor : MonoBehaviour
         }
 
         _enemiesConstructor.GenerateEnemeSpawners(_currentTiles.ToArray(), currentTile);
-    }
-
-    private void ExitLevel()
-    {
-        foreach(var tile in _currentTiles)
-        {
-            if (!tile.IsHaveFog)
-                _pool.ReturnToPool(tile);
-        }
     }
 
     private TileGeneration GenerateTile(Vector3 position, bool isFirstTile = false)

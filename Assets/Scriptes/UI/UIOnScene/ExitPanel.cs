@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ExitPanel : MonoBehaviour
 {
@@ -93,7 +94,7 @@ public class ExitPanel : MonoBehaviour
 
     private void Replay()
     {
-        OnExit?.Invoke(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void ClosePanel()

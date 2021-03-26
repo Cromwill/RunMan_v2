@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ArmorInfo : MonoBehaviour
 {
     [SerializeField] private Text _bulletCountViewer;
+    [SerializeField] private Image _reloadImage;
 
     private Animator _selfAnimator;
     private int _currentBulletCount;
@@ -16,6 +17,11 @@ public class ArmorInfo : MonoBehaviour
 
         _selfAnimator.Play("AmmunationFire");
         _currentBulletCount = count;
+    }
+
+    public void ReloadShow(float currentValue, float maxValue)
+    {
+        _reloadImage.fillAmount = 1 - (1 / maxValue * currentValue);
     }
 
     public void ChangeValue()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDamager : MonoBehaviour, IPlayerComponent
 {
@@ -12,6 +13,7 @@ public class PlayerDamager : MonoBehaviour, IPlayerComponent
 
     private PlayerDamageZone _damageZone;
     private Animator _playerAnimator;
+    private float _currentShootSpeed;
 
     private event Action<string> _boosterUsed;
 
@@ -22,8 +24,12 @@ public class PlayerDamager : MonoBehaviour, IPlayerComponent
         _playerAnimator = GetComponent<Animator>();
         _damageZone = GetComponentInChildren<PlayerDamageZone>();
         _damageZone.FindedEnemies += Shoot;
+        _currentShootSpeed = _shootSpeed;
         if (_armorViewer != null)
+        {
             _armorViewer.Show(_bulletCount);
+            _armorViewer.ReloadShow(_currentShootSpeed, _shootSpeed);
+        }
     }
 
     public void Initialization(Action<string> action, params Booster[] boosters)
@@ -62,14 +68,30 @@ public class PlayerDamager : MonoBehaviour, IPlayerComponent
 
     private void Shoot(Enemy enemy)
     {
-        if (_bulletCount > 0)
+        if (_bulletCount > 0 && _currentShootSpeed == _shootSpeed)
         {
             _bulletCount--;
+            _currentShootSpeed = 0;
             _armorViewer.Show(_bulletCount);
+            _armorViewer.ReloadShow(_currentShootSpeed, _shootSpeed);
             enemy.AddDamage(_defaultDamage);
             _playerAnimator.SetBool("Shoot", true);
+
             StartCoroutine(FinishShoot());
+            StartCoroutine(ShootDelay());
         }
+    }
+
+    private IEnumerator ShootDelay()
+    {
+        while(_currentShootSpeed < _shootSpeed)
+        {
+            _currentShootSpeed += Time.deltaTime;
+            _armorViewer.ReloadShow(_currentShootSpeed, _shootSpeed);
+            yield return null;
+        }
+
+        _currentShootSpeed = _shootSpeed;
     }
 
     private IEnumerator FinishShoot()

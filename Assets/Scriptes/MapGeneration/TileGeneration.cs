@@ -8,6 +8,7 @@ public class TileGeneration : MonoBehaviour
     public Vector3[] NotDestroyObjectPositions;
     public Vector3[] DestroyPositions;
     public Vector3 EnemiesSpawnDot;
+    public bool IsStartTile;
 
     private Mesh _mesh;
     private MapElementPool _pool;

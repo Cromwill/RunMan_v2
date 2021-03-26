@@ -6,6 +6,8 @@ using UnityEditor;
 [CustomEditor(typeof(TileGeneration))]
 public class TileGenerationEditor : Editor
 {
+    private SerializedProperty isStartTile;
+
     protected virtual void OnSceneGUI()
     {
         var t = (TileGeneration)target;
